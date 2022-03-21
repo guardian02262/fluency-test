@@ -6,7 +6,7 @@
 
 use frame_support::{decl_module, debug, dispatch, sp_runtime::print};
 use frame_system::ensure_signed;
-
+pub use pallet_timestamp::Call as TimestampCall;
 #[cfg(test)]
 mod mock;
 
@@ -45,7 +45,7 @@ decl_module! {
 
 impl<T: Trait> Module<T> {
 	pub fn get_current_block_time() -> u32 {
-		let current_block_number : <T as frame_system::Trait>::BlockNumber = frame_system::Module::<T>::block_number();
-		123456789
+		let _now = <TimestampCall::Module<T>>::get();
+		_now
 	}
 }

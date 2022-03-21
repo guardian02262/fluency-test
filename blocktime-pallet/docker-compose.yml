@@ -1,0 +1,9 @@
+# development configuration
+version: '3.8'
+services:
+
+  # Planets service
+  substrate-node:
+    build:
+      context: .
+      dockerfile: ./Dockerfile

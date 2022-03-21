@@ -1,0 +1,16 @@
+.devcontainer
+scripts/
+target/
+.vscode/
+*/Dockerfile
+doc/
+.github/
+Makefile
+README.md
+LICENSE
+Cargo.lock
+Cargo.toml
+node/
+pallets/
+runtime/
+.git
